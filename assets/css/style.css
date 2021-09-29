@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header CSS */
+header {
+  /* background: brown; */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 10px;
+  height: 50px;
+  /* line-height: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .filter {
+  display: flex;
+}
+header .filter li {
+  list-style: none;
+  margin: 5px;
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+header .filter li.active, header .filter li:hover {
+  color: white;
+  background: #03a9f4;
+}
+
+/*End Header*/
+.product {
+  display: flex;
+  min-height: 100vh;
+  background: #dcdcdc;
+  flex-direction: column;
+  align-items: center;
+}
+.product .list-product {
+  display: grid;
+  padding: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 1200px;
+  height: 100%;
+}
+.product .list-product .item {
+  display: flex;
+  width: 250px;
+  height: 430px;
+  overflow: hidden;
+  background: #fff;
+}
+.product .list-product .item .picture {
+  display: flex;
+  width: 250px;
+  height: 310px;
+  position: relative;
+  transition: all 0.5s linear;
+}
+.product .list-product .item .picture img {
+  width: 100%;
+}
+.product .list-product .item .picture:hover {
+  transform: scale(1.4);
+}
+
+/*# sourceMappingURL=style.css.map */

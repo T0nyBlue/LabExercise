@@ -7,29 +7,27 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Header CSS */
 header {
-    /* background: brown; */
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    right: 0;
     margin: 10px;
-    height: 50px;
-    /* line-height: 25px; */
     display: flex;
     justify-content: center;
     align-items: center;
 
     .filter {
         display: flex;
+        flex-direction: row;
 
         li{
-            list-style: none;
             margin: 5px;
             padding: 8px 20px;
+            width: max-content;
+            list-style: none;
             letter-spacing: 1px;
-            font-family: 'Poppins', sans-serif;
             text-decoration: none;
             background: #ccc;
             color: #000;
@@ -52,7 +50,7 @@ header {
     background: #dcdcdc;
     // background: coral;
     flex-direction: column;
-    align-items: center; //can giua chieu ngang
+    align-items: center; //can giua chieu doc
     
     .list-product {
         display: grid;
@@ -65,29 +63,73 @@ header {
 
         .item{
             display: flex;
+            flex-direction: column;
+            position: relative;
             width: 250px;
             height: 430px;
             overflow: hidden;
             background: #fff;
+            z-index: 1;
 
             .picture {
                 display: flex;
                 width: 250px;
                 height: 310px;
                 position: relative;
-                transition: all 0.5s linear;
-                // overflow: hidden;
-    
+                overflow: hidden;
+                z-index: -1;
+                
                 img {
                     width: 100%;
+                    transition: all 0.5s linear;
                 }
                 
-                &:hover {
+            }
+            
+            &-content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                width: 250px;
+                height: 120px;
+                font-size: 20px;
+                background: #fff;
+                // z-index: 1;
+                
+                .product-name {
+                    // background: tomato;
+                    grid-column: 1/3;
+                    grid-row: 1/2;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px;
+                    margin-top: 10px;
+                }
+
+                .product-price {
+                    // background: crimson;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px;
+                    color: #ff2020;
+                    font-weight: 500;
+                }
+
+                .product-rate {
+                    // background: #ccc;
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                }
+            }
+
+            &:hover {
+                img{
                     transform: scale(1.4);
                 }
             }
         }
-
 
     }
 }

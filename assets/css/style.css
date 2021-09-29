@@ -6,29 +6,27 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Poppins", sans-serif;
+}
+
 /* Header CSS */
 header {
-  /* background: brown; */
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  right: 0;
   margin: 10px;
-  height: 50px;
-  /* line-height: 25px; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header .filter {
   display: flex;
+  flex-direction: row;
 }
 header .filter li {
-  list-style: none;
   margin: 5px;
   padding: 8px 20px;
+  width: max-content;
+  list-style: none;
   letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
   text-decoration: none;
   background: #ccc;
   color: #000;
@@ -57,22 +55,57 @@ header .filter li.active, header .filter li:hover {
 }
 .product .list-product .item {
   display: flex;
+  flex-direction: column;
+  position: relative;
   width: 250px;
   height: 430px;
   overflow: hidden;
   background: #fff;
+  z-index: 1;
 }
 .product .list-product .item .picture {
   display: flex;
   width: 250px;
   height: 310px;
   position: relative;
-  transition: all 0.5s linear;
+  overflow: hidden;
+  z-index: -1;
 }
 .product .list-product .item .picture img {
   width: 100%;
+  transition: all 0.5s linear;
 }
-.product .list-product .item .picture:hover {
+.product .list-product .item-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 250px;
+  height: 120px;
+  font-size: 20px;
+  background: #fff;
+}
+.product .list-product .item-content .product-name {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+.product .list-product .item-content .product-price {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #ff2020;
+  font-weight: 500;
+}
+.product .list-product .item-content .product-rate {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.product .list-product .item:hover img {
   transform: scale(1.4);
 }
 

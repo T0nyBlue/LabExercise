@@ -106,7 +106,7 @@ header .filter li:hover {
 .product .list-product .item .picture .item-button-list .item-button-single:nth-child(3) {
   transition-delay: 0.3s;
 }
-.product .list-product .item .picture .item-button-list .item-button-single span {
+.product .list-product .item .picture .item-button-list .item-button-single p {
   display: none;
   margin-top: 5px;
   margin-right: 10px;
@@ -135,7 +135,7 @@ header .filter li:hover {
 .product .list-product .item .picture .item-button-list .item-button-single .item-button-icon i {
   font-size: 20px;
 }
-.product .list-product .item .picture .item-button-list .item-button-single:hover span {
+.product .list-product .item .picture .item-button-list .item-button-single:hover p {
   display: flex;
 }
 .product .list-product .item .picture .item-button-list .item-button-single:hover .item-button-icon {
@@ -178,6 +178,12 @@ header .filter li:hover {
 }
 .product .list-product .item:hover .item-button-single {
   transform: translateX(-110px);
+}
+
+@media only screen and (max-width: 1199px) {
+  .product .list-product {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

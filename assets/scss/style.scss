@@ -32,8 +32,9 @@ header {
             background: #ccc;
             color: #000;
             cursor: pointer;
+            border-radius: 4px;
 
-            &.active, &:hover{
+            &:hover{
                 color: white;
                 background: #03a9f4;
             }
@@ -63,6 +64,7 @@ header {
 
         .item{
             display: flex;
+            margin: 0 auto;
             flex-direction: column;
             position: relative;
             width: 250px;
@@ -70,20 +72,98 @@ header {
             overflow: hidden;
             background: #fff;
             z-index: 1;
+            border-radius: 16px;
 
             .picture {
                 display: flex;
                 width: 250px;
                 height: 310px;
                 position: relative;
-                overflow: hidden;
                 z-index: -1;
                 
-                img {
+                .item-picture {
+                    object-fit: cover;
                     width: 100%;
                     transition: all 0.5s linear;
                 }
                 
+                .item-button-list {
+                    position: absolute;
+                    width: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    top: 10px;
+                    right: -60px;
+
+                    
+
+                    .item-button-single {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        list-style-type: none ;
+                        width: 80px;
+                        height: 40px;
+                        margin: 4px;
+                        transition: all 0.5s ease;
+                        justify-content: flex-end;
+
+                        &:nth-child(1){
+                            transition-delay: 0s;
+                        }
+    
+                        &:nth-child(2){
+                            transition-delay: 0.1s;
+                        }
+    
+                        &:nth-child(3){
+                            transition-delay: 0.3s;
+                        }
+                        
+                        span {
+                            display: none;
+                            margin-top: 5px;
+                            margin-right: 10px;
+                            padding: 0 10px;
+                            border-radius: 4px;
+                            align-items: center;
+                            width: max-content;
+                            height: 30px;
+                            font-size: 12px;
+                            font-weight: 900;
+                            letter-spacing: 1px;
+                            white-space: nowrap;
+                            background-color: #fff;
+                        }
+
+                        .item-button-icon {
+                            border-radius: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 40px;
+                            height: 40px;
+                            padding: 0 16px;
+                            cursor: pointer;
+                            background-color: #fff;
+
+                            i {
+                                font-size: 20px;
+                            }
+                        }
+
+                        &:hover{
+                            span {
+                                display: flex;
+                            }
+                            .item-button-icon{
+                                color:#fff;
+                                background-color: red;
+                            }
+                            
+                        }
+                    }
+                }
             }
             
             &-content {
@@ -94,6 +174,7 @@ header {
                 height: 120px;
                 font-size: 20px;
                 background: #fff;
+                border-radius: 4px;
                 // z-index: 1;
                 
                 .product-name {
@@ -125,8 +206,12 @@ header {
             }
 
             &:hover {
-                img{
+                .item-picture{
                     transform: scale(1.4);
+                }
+
+                .item-button-single {
+                    transform: translateX(-110px);
                 }
             }
         }

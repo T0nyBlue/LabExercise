@@ -33,7 +33,7 @@ header .filter li {
   cursor: pointer;
   border-radius: 4px;
 }
-header .filter li:hover {
+header .filter li.active, header .filter li:hover {
   color: white;
   background: #03a9f4;
 }

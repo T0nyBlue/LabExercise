@@ -34,6 +34,7 @@ header {
             cursor: pointer;
             border-radius: 4px;
 
+            &.active,
             &:hover{
                 color: white;
                 background: #03a9f4;

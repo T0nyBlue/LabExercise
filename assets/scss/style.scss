@@ -11,6 +11,14 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
+/*Common*/
+/*hide product*/
+.hide {
+    .product .item {
+        display: none;
+    }
+}
+
 /* Header CSS */
 header {
     margin: 10px;
@@ -34,7 +42,7 @@ header {
             cursor: pointer;
             border-radius: 4px;
 
-            &.active,
+            &.active-filter,
             &:hover{
                 color: white;
                 background: #03a9f4;
@@ -46,6 +54,13 @@ header {
 
 /*End Header*/
 
+.myP {
+    p{
+        color: #ff2020;
+    }
+}
+
+/*Product*/ 
 .product{
     display: flex;
     min-height: 100vh;
@@ -95,8 +110,6 @@ header {
                     flex-direction: column;
                     top: 10px;
                     right: -60px;
-
-                    
 
                     .item-button-single {
                         position: relative;

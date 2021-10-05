@@ -10,6 +10,12 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+/*Common*/
+/*hide product*/
+.hide .product .item {
+  display: none;
+}
+
 /* Header CSS */
 header {
   margin: 10px;
@@ -33,12 +39,17 @@ header .filter li {
   cursor: pointer;
   border-radius: 4px;
 }
-header .filter li.active, header .filter li:hover {
+header .filter li.active-filter, header .filter li:hover {
   color: white;
   background: #03a9f4;
 }
 
 /*End Header*/
+.myP p {
+  color: #ff2020;
+}
+
+/*Product*/
 .product {
   display: flex;
   min-height: 100vh;

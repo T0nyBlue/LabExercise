@@ -136,7 +136,8 @@ header {
                         
                         p {
                             display: none;
-                            margin-top: 5px;
+                            margin-top: auto;
+                            margin-bottom: auto;
                             margin-right: 10px;
                             padding: 0 10px;
                             border-radius: 4px;
@@ -216,6 +217,10 @@ header {
                     // background: #ccc;
                     grid-column: 2/3;
                     grid-row: 2/3;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    color: #ffd966;
                 }
             }
 
@@ -233,6 +238,42 @@ header {
     }
 }
 
+/*Page number*/
+.page-number {
+
+    .number-list {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+        // align-items: center;
+        background-color: #dcdcdc;
+        
+        li{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            line-height: 100%;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            background-color: #fff;
+            margin: 4px;
+            cursor: pointer;
+            font-weight: 400px;
+            
+            &.page,
+            &:hover {
+                color: white;
+                background: #03a9f4;
+            }
+
+        }
+    }
+}
+
+/*Responsive*/ 
 @media only screen and (max-width: 1199px) {
     .product .list-product {
         width: 100%;

@@ -1,5 +1,6 @@
 let btns = document.querySelectorAll('.nav');
-let product_list = document.querySelectorAll('.item')
+let product_list = document.querySelectorAll('.item');
+let btns_pagenumber = document.querySelectorAll('.number');
 
 btns.forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -21,5 +22,10 @@ btns.forEach(function(btn) {
     });    
 });
 
-
+btns_pagenumber.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        btns_pagenumber.forEach(btn => btn.classList.remove('page'));
+        this.classList.add('page');
+    });    
+});
 

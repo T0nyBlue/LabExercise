@@ -1,6 +1,5 @@
 let btns = document.querySelectorAll('.nav');
 let product_list = document.querySelectorAll('.item')
-// let filter = document.querySelectorAll('.active-filter');
 
 btns.forEach(function(btn) {
     btn.addEventListener('click', function() {
